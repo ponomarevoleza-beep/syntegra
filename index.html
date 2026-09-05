@@ -1,0 +1,1102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SYNTEGRA — поставка запчастей к полупроводниковому оборудованию, химии и промышленного оборудования из Азии</title>
+<meta name="description" content="Торговый дом SYNTEGRA. Находим и поставляем то, чего нет в каталогах: запчасти к полупроводниковому оборудованию, химия для микроэлектроники, промышленное снабжение. Из Азии — в Россию и Беларусь, по договору и в рублях.">
+<!-- УБРАТЬ ПРИ ПЕРЕЕЗДЕ НА СВОЙ ДОМЕН: закрывает превью от поисковиков -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#070A10">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SYNTEGRA — находим и поставляем то, чего нет в каталогах">
+<meta property="og:description" content="Запчасти к полупроводниковому оборудованию, химия для микроэлектроники, промышленное снабжение. Из Азии — в Россию и Беларусь, по договору и в рублях.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23080A0F'/%3E%3Cpath d='M70 30 L42 30 L22 50 L58 50 L78 70 L30 70' fill='none' stroke='%23E9E9EA' stroke-width='11'/%3E%3C/svg%3E">
+<script>document.documentElement.className += " js"</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..600&family=Literata:opsz,wght@7..72,300..400&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════════════════════════
+   SYNTEGRA — одностраничный сайт
+   Один самодостаточный файл: стили и скрипты внутри.
+   Внешних библиотек нет. Google Fonts — с системным фолбэком:
+   без интернета страница остаётся полностью рабочей.
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root{
+  --bg:#080A0F;
+  --bg-2:#0C1016;
+  --bg-3:#11161F;
+  --blue-deep:#06202F;
+  --blue-line:rgba(120,205,245,.18);
+  --blue-text:#A7CCE0;
+  --blue-dim:#7FAEC8;
+  --text:#E9E9EA;
+  --muted:#9B9BA2;
+  --dim:#85858E;
+  --faint:#74747E;
+  --line:rgba(255,255,255,.09);
+  --line-2:rgba(255,255,255,.16);
+  --accent:#4FADE2;
+  --accent-deep:#1B87C9;
+  --accent-hi:#82CFF2;
+  --maxw:1340px;
+  --pad:clamp(20px,4.4vw,64px);
+  --ease:cubic-bezier(.19,1,.22,1);
+  --sans:'Golos Text',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  --serif:'Literata',Georgia,'Times New Roman',serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--sans);font-size:16px;line-height:1.62;font-weight:400;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit;color:inherit}
+img{display:block;max-width:100%;height:auto}
+::selection{background:rgba(79,173,226,.32)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.field :focus-visible{outline-offset:6px}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.sec-grid>*,.dir>*,.figs>*,.safes>*,.form-grid>*,.foot>*,.hero-foot>*,.step>*{min-width:0}
+.sec{padding:clamp(78px,10vw,148px) 0;border-top:1px solid var(--line);contain:layout style}
+
+/* ── типографика ───────────────────────────────────────────── */
+h1,h2,h3,h4{margin:0;font-weight:500;letter-spacing:-.035em;line-height:1.04;text-wrap:balance}
+h1{font-size:clamp(38px,7.4vw,94px);letter-spacing:-.045em;line-height:.98}
+h2{font-size:clamp(29px,4.4vw,56px)}
+h3{font-size:clamp(19px,2.1vw,26px);letter-spacing:-.025em;line-height:1.2}
+p{margin:0 0 1.05em}
+p:last-child{margin-bottom:0}
+.lead{color:var(--muted);font-size:clamp(15.5px,1.45vw,18.5px);line-height:1.62;max-width:60ch}
+.tag{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);font-weight:500}
+.serif{font-family:var(--serif);font-weight:300;letter-spacing:-.015em}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:'tnum' 1}
+
+/* асимметричная сетка секции: узкая колонка-маркер слева, контент справа */
+.sec-grid{display:grid;grid-template-columns:minmax(0,2.6fr) minmax(0,9fr);gap:clamp(26px,5vw,80px)}
+.sec-aside{display:flex;flex-direction:column;gap:8px;position:sticky;top:104px;align-self:start}
+.sec-aside .no{font-family:var(--serif);font-size:13px;color:var(--accent);font-weight:400}
+.sec-head{margin-bottom:clamp(42px,5.4vw,74px)}
+.sec-head .lead{margin-top:20px}
+
+/* ── появление при прокрутке ───────────────────────────────── */
+/* класс .js ставит скрипт в шапке документа: без JS блоки не прячутся вовсе */
+.js .rv{opacity:0;transform:translateY(20px);
+  transition:opacity .9s var(--ease),transform .9s var(--ease);
+  transition-delay:calc(var(--i,0) * 55ms)}
+.js .rv.in{opacity:1;transform:none}
+
+/* заголовок первого экрана выходит построчно */
+.h-line{display:block}
+.js .rv.lines{opacity:1;transform:none}
+.js .rv.lines .h-line{opacity:0;transform:translateY(30px);
+  transition:opacity 1.05s var(--ease),transform 1.05s var(--ease);
+  transition-delay:calc(var(--i,0) * 120ms)}
+.js .rv.lines.in .h-line{opacity:1;transform:none}
+
+
+
+/* ── кнопки ────────────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:12px;padding:15px 26px;border:1px solid transparent;
+  border-radius:2px;cursor:pointer;font-size:14.5px;font-weight:500;letter-spacing:-.005em;
+  white-space:nowrap;transition:background .5s var(--ease),color .5s var(--ease),border-color .5s var(--ease)}
+.btn-solid{background:var(--accent);color:#04121C}
+.btn-solid:hover{background:#6AC2F0}
+.btn-line:focus-visible,.btn-solid:focus-visible{outline-offset:3px}
+.btn-line{border-color:var(--line-2);color:var(--text)}
+.btn-line:hover{border-color:var(--text);background:rgba(255,255,255,.04)}
+.btn .arr{transition:transform .55s var(--ease)}
+.btn:hover .arr{transform:translateX(5px)}
+
+/* ═══════════════ ШАПКА ═══════════════ */
+header{position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid transparent;
+  transition:background .5s var(--ease),border-color .5s var(--ease),backdrop-filter .5s}
+header.stuck{background:rgba(7,10,16,.94);backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);border-bottom-color:var(--line)}
+.bar{display:flex;align-items:center;gap:32px;height:78px}
+.logo{display:flex;align-items:center;gap:12px;flex:none}
+.logo svg{width:26px;height:26px;flex:none}
+.logo b{font-weight:500;font-size:14px;letter-spacing:.26em;text-transform:uppercase}
+.nav{margin-left:auto;display:flex;gap:30px;align-items:center}
+.nav a{font-size:13px;color:var(--muted);letter-spacing:.01em;transition:color .35s;
+  position:relative;padding:5px 0}
+.nav a:not(.btn)::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;
+  background:var(--accent);transform:scaleX(0);transform-origin:right;
+  transition:transform .5s var(--ease)}
+.nav a:not(.btn):hover{color:var(--text)}
+.nav a:not(.btn):hover::after{transform:scaleX(1);transform-origin:left}
+.nav a.btn-solid{color:#04121C}
+.nav .btn{flex:none;margin-left:6px;padding:11px 20px;font-size:13.5px}
+.burger{display:none;margin-left:auto;width:44px;height:44px;background:none;border:1px solid var(--line);
+  border-radius:2px;cursor:pointer;position:relative;flex:none}
+.burger span{position:absolute;left:13px;right:13px;height:1px;background:var(--text);
+  transition:transform .45s var(--ease),opacity .3s}
+.burger span:nth-child(1){top:18px}
+.burger span:nth-child(2){bottom:18px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){transform:translateY(-7px) rotate(-45deg)}
+
+/* ═══════════════ ЭКРАН 1 ═══════════════ */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;
+  padding-top:clamp(112px,13vh,152px);padding-bottom:clamp(46px,6vw,84px);overflow:hidden}
+.hero .wrap{width:100%}
+.hero .tag{margin-bottom:clamp(22px,3vw,34px)}
+.hero h1{margin-bottom:clamp(34px,4.4vw,58px)}
+.hero-foot{display:grid;grid-template-columns:minmax(0,5.4fr) minmax(0,4fr);
+  gap:clamp(24px,4vw,72px);align-items:end;
+  border-top:1px solid var(--line);padding-top:clamp(26px,3vw,38px)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(24px,3vw,34px)}
+.hero-quote{font-family:var(--serif);font-weight:300;font-size:clamp(15px,1.5vw,18.5px);
+  line-height:1.5;color:#C6C6CC;letter-spacing:-.01em;max-width:36ch}
+
+/* ═══════════════ ЦИФРЫ ═══════════════ */
+.figs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.fig{padding:clamp(30px,3.4vw,46px) clamp(16px,2vw,30px) clamp(30px,3.4vw,46px) 0;
+  border-left:1px solid var(--blue-line);padding-left:clamp(18px,2vw,30px)}
+.fig:first-child{border-left:0;padding-left:0}
+.fig-n{display:block;font-family:var(--serif);font-weight:300;font-variant-numeric:tabular-nums;
+  font-size:clamp(38px,5vw,68px);line-height:1;letter-spacing:-.04em;color:var(--accent-hi);
+  white-space:nowrap}
+.fig-n .aff{font-size:.4em;letter-spacing:0;vertical-align:.95em;color:var(--accent);
+  font-style:normal;margin-left:.08em}
+.fig-l{display:block;margin-top:16px;font-size:13px;color:var(--dim);line-height:1.45;max-width:20ch}
+
+/* ═══════════════ НАПРАВЛЕНИЯ ═══════════════ */
+.dir{display:grid;grid-template-columns:minmax(0,4.4fr) minmax(0,5.6fr);gap:clamp(22px,4vw,64px);
+  padding:clamp(34px,4vw,56px) 0;border-top:1px solid var(--line)}
+.dir:first-child{border-top:0;padding-top:0}
+.dir h3{max-width:17ch}
+.dir p{color:var(--muted);font-size:15px;margin-top:18px;max-width:44ch}
+.dir-list{list-style:none;margin:0;padding:0;column-count:2;column-gap:32px}
+.dir-list li{font-size:14.5px;color:#BEBEC5;padding:9px 0;border-top:1px solid var(--line);
+  break-inside:avoid;transition:color .4s var(--ease),padding-left .45s var(--ease)}
+.dir-list li:hover{color:var(--accent-hi);padding-left:8px}
+.dir-fine{margin-top:20px;font-size:12px;color:var(--dim);column-span:all}
+.dir-fine code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11.5px;color:#8A8A92}
+
+/* ═══════════════ ФОТОПОЛОСА ═══════════════ */
+/* ═══════════════ ОБОРУДОВАНИЕ ═══════════════ */
+.oem{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 clamp(20px,3vw,48px)}
+.oem div{border-top:1px solid var(--line);padding:20px 0;font-size:clamp(15px,1.5vw,18px);
+  letter-spacing:-.02em;display:flex;gap:12px;align-items:baseline;position:relative;
+  transition:color .4s var(--ease),padding-left .5s var(--ease)}
+.oem div::before{content:'';position:absolute;top:-1px;left:0;right:0;height:1px;background:var(--accent);
+  transform:scaleX(0);transform-origin:right;transition:transform .55s var(--ease)}
+.oem div:hover{color:var(--accent-hi);padding-left:10px}
+.oem div:hover::before{transform:scaleX(1);transform-origin:left}
+.oem i{font-family:var(--serif);font-style:normal;font-size:11px;color:var(--accent);flex:none;opacity:.75}
+.fine{margin-top:34px;font-size:12px;color:var(--dim);max-width:80ch;line-height:1.6}
+
+/* ═══════════════ ПРОЦЕСС ═══════════════ */
+.steps{border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3.4fr) minmax(0,6fr);
+  gap:clamp(16px,3vw,48px);padding:clamp(24px,2.8vw,38px) 0;border-bottom:1px solid var(--line);
+  position:relative;transition:opacity .6s var(--ease)}
+.step::before{content:'';position:absolute;left:0;bottom:-1px;height:1px;width:0;background:var(--accent);
+  transition:width 1.1s var(--ease)}
+.step.on::before{width:100%}
+.step-no{font-family:var(--serif);font-size:clamp(22px,2.4vw,32px);font-weight:300;color:var(--faint);
+  line-height:1;transition:color .6s var(--ease)}
+.step.on .step-no{color:var(--accent)}
+.step h3{color:var(--dim);transition:color .6s var(--ease)}
+.step.on h3{color:var(--text)}
+.step p{color:var(--muted);font-size:14.5px;max-width:52ch}
+
+/* ═══════════════ БЕЗОПАСНОСТЬ ═══════════════ */
+.safes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(30px,5vw,80px)}
+.safe{padding:clamp(32px,3.6vw,52px) 0;border-top:1px solid var(--line)}
+.safe h3{max-width:19ch;margin-bottom:18px}
+.safe p{color:var(--muted);font-size:14.5px;max-width:46ch}
+.safe .pull{margin-top:22px;font-family:var(--serif);font-weight:300;
+  font-size:clamp(16px,1.75vw,20px);line-height:1.45;color:#D5D5DA;letter-spacing:-.015em;max-width:32ch}
+.claim{border-top:1px solid var(--line);padding-top:clamp(40px,5vw,72px);margin-top:clamp(30px,4vw,54px)}
+.claim q{quotes:none;font-family:var(--serif);font-weight:300;display:block;
+  font-size:clamp(24px,3.6vw,48px);line-height:1.16;letter-spacing:-.03em;max-width:22ch}
+.claim p{margin-top:26px;color:var(--dim);font-size:14.5px;max-width:46ch}
+
+/* секция на глубоком синем — крупное цветовое пятно в середине страницы.
+   Все цвета внутри переопределяются от синих токенов, чтобы контраст держался. */
+.sec-blue{background:var(--blue-deep)}
+.sec-blue h2,.sec-blue h3{color:#F1F5FA}
+.sec-blue .tag{color:var(--blue-dim)}
+.sec-blue .sec-aside .no{color:var(--accent-hi)}
+.sec-blue .lead,.sec-blue .safe p{color:var(--blue-text)}
+.sec-blue .safe{border-top-color:var(--blue-line)}
+.sec-blue .safe .pull{color:#E7EFF9}
+.sec-blue .claim{border-top-color:var(--blue-line)}
+.sec-blue .claim q{color:#FFF}
+.sec-blue .claim p{color:var(--blue-dim)}
+.sec-blue .contacts a,.sec-blue .contacts span,.sec-blue .after,
+.sec-blue .file,.sec-blue .geo-box{border-color:var(--blue-line)}
+.sec-blue .contacts em,.sec-blue .consent,.sec-blue .file small{color:var(--blue-dim)}
+.sec-blue .contacts a:hover{color:#FFF}
+.sec-blue .after{color:var(--blue-text)}
+.sec-blue .field input,.sec-blue .field textarea{border-bottom-color:var(--blue-line);color:#F1F5FA}
+.sec-blue .field label{color:var(--blue-dim)}
+.sec-blue .field input:focus,.sec-blue .field textarea:focus{border-bottom-color:var(--accent-hi)}
+.sec-blue .file svg{color:var(--blue-dim)}
+.sec-blue .sent p{color:var(--blue-text)}
+/* на синем фоне сильнее работает белая кнопка, а не синяя */
+.sec-blue .btn-solid{background:#FFF;color:var(--blue-deep)}
+.sec-blue .btn-solid:hover{background:var(--accent-hi);color:#06121F}
+
+/* ═══════════════ ГЕОГРАФИЯ ═══════════════ */
+.geo-svg{width:100%;height:auto;display:block;margin-bottom:clamp(34px,4.5vw,64px)}
+.geo-line{fill:none;stroke:rgba(122,170,224,.26);stroke-width:1}
+.geo-node{fill:none;stroke:rgba(150,190,235,.55);stroke-width:1}
+.geo-out{stroke:var(--accent-hi)}
+.geo-lbl{fill:#A7A7B0;font-size:13px;font-family:var(--sans);letter-spacing:-.005em}
+.geo-cap{fill:#74747E;font-size:10px;letter-spacing:.24em;font-family:var(--sans)}
+.geo-lists{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(24px,4vw,64px)}
+.geo-box{border-top:1px solid var(--line);padding-top:26px}
+.geo-box h4{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);
+  font-weight:500;margin-bottom:20px}
+.geo-box ul{list-style:none;margin:0;padding:0}
+.geo-box li{font-size:15px;color:#C4C4CB;padding:8px 0}
+
+/* ═══════════════ ФОРМА ═══════════════ */
+.form-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:clamp(36px,6vw,110px)}
+.contacts{margin-top:clamp(34px,4vw,52px)}
+.contacts a,.contacts span{display:flex;align-items:baseline;gap:20px;padding:16px 0;
+  border-top:1px solid var(--line);font-size:16px;
+  transition:color .4s var(--ease),padding-left .45s var(--ease)}
+.contacts a:hover{padding-left:8px}
+.contacts a:hover{color:var(--accent-hi)}
+.contacts em{font-style:normal;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--dim);min-width:78px;flex:none}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(20px,3vw,40px)}
+.field{position:relative;padding-top:26px}
+.field input,.field textarea{width:100%;background:none;border:0;border-bottom:1px solid var(--line);
+  border-radius:0;padding:10px 0;font-size:16px;outline:none;resize:none;
+  transition:border-color .45s var(--ease)}
+.field textarea{min-height:104px;line-height:1.55}
+.field label{position:absolute;left:0;top:36px;color:var(--dim);font-size:16px;pointer-events:none;
+  transition:top .4s var(--ease),font-size .4s var(--ease),letter-spacing .4s var(--ease),color .4s}
+.field input:focus,.field textarea:focus{border-bottom-color:var(--accent)}
+.field input:focus~label,.field textarea:focus~label,
+.field input:not(:placeholder-shown)~label,.field textarea:not(:placeholder-shown)~label{
+  top:6px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--faint)}
+.field.bad input,.field.bad textarea{border-bottom-color:#B4564F}
+.field .err{position:absolute;right:0;top:6px;font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:#B4564F;opacity:0;transition:opacity .3s}
+.field.bad .err{opacity:1}
+.file{display:flex;align-items:center;gap:16px;margin:34px 0 36px;padding:20px 0;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);cursor:pointer;
+  transition:border-color .4s}
+.file:hover{border-color:var(--line-2)}
+.file input{position:absolute;width:1px;height:1px;opacity:0}
+.file svg{flex:none;color:var(--dim)}
+.file b{display:block;font-size:15px;font-weight:400}
+.file small{display:block;font-size:12.5px;color:var(--dim);margin-top:3px}
+.form-foot{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.consent{font-size:12px;color:var(--dim);line-height:1.5;max-width:34ch;flex:1 1 240px}
+.after{margin-top:30px;padding-top:22px;border-top:1px solid var(--line);
+  font-size:13.5px;color:var(--dim);max-width:52ch}
+.sent{display:none;padding:clamp(40px,6vw,80px) 0}
+.sent .serif{display:block;font-size:clamp(24px,3vw,38px);line-height:1.2;margin-bottom:18px}
+.sent p{color:var(--muted);font-size:15px;max-width:38ch}
+form.done .form-body{display:none}
+form.done .sent{display:block}
+
+/* ═══════════════ ПОДВАЛ ═══════════════ */
+footer{border-top:1px solid var(--line);padding:clamp(50px,6vw,78px) 0 40px;background:var(--bg-2)}
+.foot{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:clamp(32px,5vw,80px)}
+.foot-brand p{margin-top:22px;font-size:13px;color:var(--dim);line-height:1.6;max-width:38ch}
+.foot-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.foot-col h4{margin:0 0 18px;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--dim);font-weight:500}
+.foot-col a,.foot-col span{display:block;font-size:14.5px;margin-bottom:11px;color:#B4B4BB;transition:color .35s}
+.foot-col a:hover{color:var(--accent-hi)}
+.copy{margin-top:clamp(46px,6vw,80px);padding-top:24px;border-top:1px solid var(--line);
+  font-size:11.5px;color:var(--faint);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+/* ═══════════════ АДАПТИВ ═══════════════ */
+@media(max-width:1180px){
+  .sec-grid{grid-template-columns:1fr;gap:26px}
+  .sec-aside{position:static;flex-direction:row;gap:14px;align-items:baseline}
+  .oem{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .figs{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .fig:nth-child(4){border-left:0;padding-left:0}
+}
+@media(max-width:900px){
+  .nav{position:fixed;inset:0;margin:0;flex-direction:column;justify-content:center;gap:4px;
+    background:rgba(10,10,12,.98);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
+    opacity:0;pointer-events:none;transition:opacity .45s var(--ease)}
+  .nav.open{opacity:1;pointer-events:auto}
+  .nav a{font-size:26px;letter-spacing:-.03em;color:var(--text);padding:13px}
+  .nav .btn{margin-top:22px;font-size:15px;padding:15px 28px}
+  .burger{display:block;z-index:2}
+  .logo{position:relative;z-index:2}
+  .hero-foot,.dir,.safes,.form-grid,.foot,.geo-lists{grid-template-columns:1fr}
+  .safes{gap:0}
+  .geo-lists .geo-box+.geo-box{margin-top:6px}
+  .step{grid-template-columns:auto 1fr;gap:8px 22px}
+  .step p{grid-column:2}
+  .hero{min-height:auto;padding-top:126px;padding-bottom:64px}
+  .hero-foot{gap:30px}
+  .geo-svg{display:none}
+  .dir-list{column-count:1}
+}
+@media(max-width:640px){
+  .hero h1 br{display:none}
+  .fig-n{font-size:clamp(30px,8.6vw,42px)}
+  .fig-l{font-size:12.5px}
+  .figs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fig:nth-child(3){border-left:0;padding-left:0}
+  .fig:last-child{grid-column:1 / -1;border-left:0;padding-left:0}
+  .oem{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .row{grid-template-columns:1fr}
+  .foot-cols{grid-template-columns:1fr}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;scroll-behavior:auto !important}
+  .js .rv{opacity:1;transform:none}
+  .geo-line{stroke-dashoffset:0 !important}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Знак SYNTEGRA перерисован в вектор по присланному логотипу.
+     ЗАМЕНИТЬ ПЕРЕД ПУБЛИКАЦИЕЙ, если нужен оригинальный файл: заменить
+     содержимое symbol#logomark на путь из вашего SVG. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logomark" viewBox="0 0 100 100">
+    <path d="M50 3 L93 26 L93 74 L50 97 L7 74 L7 26 Z" fill="none" stroke="currentColor"
+          stroke-width="2" opacity=".34"/>
+    <path d="M70 30 L42 30 L22 50 L58 50 L78 70 L30 70" fill="none" stroke="currentColor"
+          stroke-width="11" stroke-linejoin="miter"/>
+  </symbol>
+</svg>
+
+<header id="header">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="SYNTEGRA, на главную">
+      <svg><use href="#logomark"/></svg><b>Syntegra</b>
+    </a>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="#supply">Что поставляем</a>
+      <a href="#oem">Оборудование</a>
+      <a href="#process">Как работаем</a>
+      <a href="#safety">Безопасность</a>
+      <a href="#geo">География</a>
+      <a class="btn btn-solid" href="#request">Заявка</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ═══════════════ ЭКРАН 1 ═══════════════ -->
+<section class="hero">
+  <div class="wrap">
+    <p class="tag rv">Торговый дом · Москва · Дубай</p>
+    <h1 class="rv lines" style="--i:1">
+      <span class="h-line">Находим и поставляем&nbsp;то,</span>
+      <span class="h-line" style="--i:1">чего нет в каталогах</span>
+    </h1>
+    <div class="hero-foot rv" style="--i:2">
+      <div>
+        <p class="lead">
+          Запчасти к полупроводниковому оборудованию, химия для микроэлектроники,
+          промышленное снабжение. Из Азии — в Россию и Беларусь, по договору и в рублях.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="#request">Отправить заявку
+            <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+          </a>
+          <a class="btn btn-line" href="#supply">Что мы поставляем</a>
+        </div>
+      </div>
+      <p class="hero-quote">
+        Проверяем и тех, у кого покупаем, и тех, кому продаём. До сделки, а не после.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ЦИФРЫ ═══════════════ -->
+<section class="sec" style="padding-top:0;border-top:0">
+  <div class="wrap">
+    <div class="figs">
+      <div class="fig rv" style="--i:0">
+        <span class="fig-n" data-count="155" data-suffix="+">0</span>
+        <span class="fig-l">проверенных поставщиков в базе</span>
+      </div>
+      <div class="fig rv" style="--i:1">
+        <span class="fig-n" data-count="300" data-prefix="до ">0</span>
+        <span class="fig-l">позиций в одной заявке обрабатываем разом</span>
+      </div>
+      <div class="fig rv" style="--i:2">
+        <span class="fig-n" data-count="13">0</span>
+        <span class="fig-l">производителей полупроводникового оборудования</span>
+      </div>
+      <div class="fig rv" style="--i:3">
+        <span class="fig-n" data-count="8">0</span>
+        <span class="fig-l">стран закупки</span>
+      </div>
+      <div class="fig rv" style="--i:4">
+        <span class="fig-n num">26–30</span>
+        <span class="fig-l">лет на рынке у поставщиков-партнёров</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ НАПРАВЛЕНИЯ ═══════════════ -->
+<section class="sec" id="supply">
+  <div class="wrap">
+    <div class="sec-grid">
+      <div class="sec-aside rv">
+        <span class="no">01</span>
+        <span class="tag">Что поставляем</span>
+      </div>
+      <div>
+        <div class="sec-head">
+          <h2 class="rv">Три направления,<br>внутри каждого — конкретика</h2>
+          <p class="lead rv" style="--i:1">
+            Если вашей позиции в списке нет, это не значит, что мы её не найдём.
+            Списком ниже показано, с чем работаем чаще всего.
+          </p>
+        </div>
+
+        <article class="dir rv">
+          <div>
+            <h3>Запчасти к полупроводниковому оборудованию</h3>
+            <p>
+              Вы присылаете список part numbers — от одной позиции до трёхсот. По каждому
+              номеру определяем, что это за деталь и к какой установке она относится.
+              Дальше ищем у производителя, у официальных дилеров и на вторичном рынке.
+            </p>
+          </div>
+          <div>
+            <ul class="dir-list">
+              <li>Камерные части: showerhead</li>
+              <li>Faceplate, shields, rings</li>
+              <li>Вакуумные насосы</li>
+              <li>Баратроны</li>
+              <li>Лазеры</li>
+              <li>Моторы</li>
+              <li>Датчики</li>
+              <li>Газовые системы</li>
+            </ul>
+            <p class="dir-fine">Формат номеров: <code>4022.456.0150</code> · <code>SERV.xxx</code></p>
+          </div>
+        </article>
+
+        <article class="dir rv">
+          <div>
+            <h3>Химия и материалы для микроэлектроники</h3>
+            <p>
+              Возим из Китая напрямую с завода-производителя, а не через перекупщиков.
+              Цикл сделки по импорту — до полугода: растаможка и валютный контроль
+              остаются на нашей стороне.
+            </p>
+          </div>
+          <div>
+            <ul class="dir-list">
+              <li>Фоторезист</li>
+              <li>Серная кислота 96% ULSI</li>
+              <li>Травильные составы</li>
+              <li>Специальные газы</li>
+            </ul>
+            <p class="dir-fine">Поставка по договору с российским юрлицом, оплата в рублях.</p>
+          </div>
+        </article>
+
+        <article class="dir rv">
+          <div>
+            <h3>Промышленное снабжение и тендеры</h3>
+            <p>
+              Участвуем в закупках: разбираем документацию и собираем предложение
+              под позиции техзадания — включая те, по которым сложно найти поставщика.
+            </p>
+          </div>
+          <div>
+            <ul class="dir-list">
+              <li>Дизель-генераторы</li>
+              <li>Промышленные шкафы</li>
+              <li>Насосное оборудование</li>
+              <li>Газовое оборудование</li>
+              <li>Подшипники</li>
+              <li>Металлопрокат</li>
+              <li>Турбины и лопатки</li>
+              <li>Датчики, ЗИП, шины</li>
+              <li>Запчасти к спецтехнике</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ОБОРУДОВАНИЕ ═══════════════ -->
+<section class="sec" id="oem">
+  <div class="wrap">
+    <div class="sec-grid">
+      <div class="sec-aside rv">
+        <span class="no">02</span>
+        <span class="tag">Совместимость</span>
+      </div>
+      <div>
+        <div class="sec-head">
+          <h2 class="rv">Оборудование, по которому работаем</h2>
+          <p class="lead rv" style="--i:1">
+            Тринадцать производителей полупроводникового оборудования,
+            по которым ведём подбор запчастей.
+          </p>
+        </div>
+        <div class="oem">
+          <div class="rv" style="--i:0"><i>01</i>ASML</div>
+          <div class="rv" style="--i:1"><i>02</i>Tokyo Electron</div>
+          <div class="rv" style="--i:2"><i>03</i>Axcelis</div>
+          <div class="rv" style="--i:3"><i>04</i>Applied Materials</div>
+          <div class="rv" style="--i:4"><i>05</i>Lam Research</div>
+          <div class="rv" style="--i:5"><i>06</i>Novellus</div>
+          <div class="rv" style="--i:6"><i>07</i>KLA</div>
+          <div class="rv" style="--i:7"><i>08</i>Pfeiffer</div>
+          <div class="rv" style="--i:8"><i>09</i>Edwards</div>
+          <div class="rv" style="--i:9"><i>10</i>Ebara</div>
+          <div class="rv" style="--i:10"><i>11</i>Varian</div>
+          <div class="rv" style="--i:11"><i>12</i>Mattson</div>
+          <div class="rv" style="--i:12"><i>13</i>Hitachi</div>
+        </div>
+        <p class="fine rv">
+          Названия производителей приведены исключительно для обозначения совместимости
+          запчастей. SYNTEGRA не является официальным представителем перечисленных компаний;
+          товарные знаки принадлежат их правообладателям.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ПРОЦЕСС ═══════════════ -->
+<section class="sec" id="process">
+  <div class="wrap">
+    <div class="sec-grid">
+      <div class="sec-aside rv">
+        <span class="no">03</span>
+        <span class="tag">Процесс</span>
+      </div>
+      <div>
+        <div class="sec-head">
+          <h2 class="rv">Как мы работаем</h2>
+          <p class="lead rv" style="--i:1">
+            Шесть шагов от вашего списка до поставки. Валюта, таможня и поиск
+            остаются на нашей стороне.
+          </p>
+        </div>
+
+        <div class="steps" id="steps">
+          <div class="step">
+            <span class="step-no">01</span>
+            <h3>Заявка</h3>
+            <p>Вы присылаете список позиций — файлом, письмом или прямо в форме на сайте.</p>
+          </div>
+          <div class="step">
+            <span class="step-no">02</span>
+            <h3>Разбор</h3>
+            <p>Определяем позиции. Около пятой части номеров требует уточнения — по ним
+               возвращаемся с вопросами, остальные определяются сразу.</p>
+          </div>
+          <div class="step">
+            <span class="step-no">03</span>
+            <h3>Запросы</h3>
+            <p>Уходят параллельно: производителям, официальным дилерам, на вторичный рынок.</p>
+          </div>
+          <div class="step">
+            <span class="step-no">04</span>
+            <h3>Проверка</h3>
+            <p>Собираем ответы и проверяем поставщиков — до того, как отправить им деньги.</p>
+          </div>
+          <div class="step">
+            <span class="step-no">05</span>
+            <h3>Предложение</h3>
+            <p>Коммерческое предложение в рублях: наименование, состояние (новое или&nbsp;б/у),
+               срок поставки, стоимость. Доставка до вашего адреса включена.</p>
+          </div>
+          <div class="step">
+            <span class="step-no">06</span>
+            <h3>Поставка</h3>
+            <p>Договор с российским юрлицом, оплата в рублях, поставка. Ни валютой,
+               ни таможней вам заниматься не нужно.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ БЕЗОПАСНОСТЬ ═══════════════ -->
+<section class="sec sec-blue" id="safety">
+  <div class="wrap">
+    <div class="sec-grid">
+      <div class="sec-aside rv">
+        <span class="no">04</span>
+        <span class="tag">Почему с нами безопасно</span>
+      </div>
+      <div>
+        <div class="sec-head">
+          <h2 class="rv">Четыре причины,<br>по которым к нам возвращаются</h2>
+        </div>
+
+        <div class="safes">
+          <article class="safe rv">
+            <h3>Проверяем обе стороны сделки</h3>
+            <p>
+              Прежде чем отправить деньги поставщику или отгрузить товар покупателю, смотрим
+              регистрационные данные, финансовую отчётность, налоговую дисциплину, арбитражные
+              дела, исполнительные производства, признаки банкротства, реестр недобросовестных
+              поставщиков, санкционные списки, массовый адрес и номинального директора.
+            </p>
+            <p>Директора и учредителей проверяем отдельно, как физических лиц.</p>
+            <p class="pull">Проверяем и тех, у кого покупаем, и тех, кому продаём. До сделки, а не после.</p>
+          </article>
+
+          <article class="safe rv" style="--i:1">
+            <h3>Работаем с тем, чего нет в каталогах</h3>
+            <p>
+              Детали к оборудованию, которое давно снято с производства. Позиции с вторичного
+              рынка. Единичные запчасти под конкретную установку.
+            </p>
+            <p>
+              Именно с такими запросами к нам приходят чаще всего — когда обычные каналы
+              снабжения уже отработали и ничего не дали.
+            </p>
+            <p class="pull">Редкая позиция — это не исключение из нашей работы, это и есть наша работа.</p>
+          </article>
+
+          <article class="safe rv">
+            <h3>Прямые отношения с азиатскими производителями</h3>
+            <p>
+              Закупаем у завода или официального дилера, без цепочки посредников.
+              Партнёры, с которыми работаем в Корее, Сингапуре и на Тайване, — компании
+              с историей 26–30 лет на рынке полупроводникового оборудования.
+            </p>
+            <p class="pull">Чем короче цепочка, тем меньше в ней мест, где что-то может пойти не так.</p>
+          </article>
+
+          <article class="safe rv" style="--i:1">
+            <h3>Один менеджер, за которым стоит команда</h3>
+            <p>
+              Вы общаетесь с одним человеком: project manager ведёт заявку от разбора позиций
+              до поставки. За ним — юристы, финансисты, бухгалтерия, таможенные и технические
+              специалисты.
+            </p>
+            <p class="pull">Вам не нужно объяснять задачу заново каждому отделу.</p>
+          </article>
+        </div>
+
+        <div class="claim rv">
+          <q class="serif">Одна редкая позиция и список на полторы тысячи строк обрабатываются одинаково</q>
+          <p>Это принципиальная позиция компании. Мы не отказываем в мелкой заявке
+             и не пугаемся крупной.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ГЕОГРАФИЯ ═══════════════ -->
+<section class="sec" id="geo">
+  <div class="wrap">
+    <div class="sec-grid">
+      <div class="sec-aside rv">
+        <span class="no">05</span>
+        <span class="tag">География</span>
+      </div>
+      <div>
+        <div class="sec-head">
+          <h2 class="rv">Откуда везём и куда поставляем</h2>
+          <p class="lead rv" style="--i:1">
+            Восемь стран закупки в Азии и на Ближнем Востоке. Поставка — в Россию
+            и Беларусь, по договору с российским юрлицом.
+          </p>
+        </div>
+
+        <svg class="geo-svg rv" viewBox="112 30 820 432" role="img"
+             aria-label="Схема: восемь стран закупки в Азии, через SYNTEGRA — поставка в Россию и Беларусь">
+          <g>
+            <path class="geo-line" d="M250 56 C360 56 420 143 520 226"/>
+            <path class="geo-line" d="M268 106 C378 106 420 166 520 226"/>
+            <path class="geo-line" d="M276 156 C386 156 420 191 520 226"/>
+            <path class="geo-line" d="M272 206 C382 206 420 216 520 226"/>
+            <path class="geo-line" d="M260 256 C370 256 420 241 520 226"/>
+            <path class="geo-line" d="M240 306 C350 306 420 266 520 226"/>
+            <path class="geo-line" d="M214 356 C324 356 420 291 520 226"/>
+            <path class="geo-line" d="M182 404 C292 404 420 315 520 226"/>
+            <path class="geo-line geo-out" d="M520 226 C620 226 700 146 820 146"/>
+            <path class="geo-line geo-out" d="M520 226 C620 226 700 316 820 316"/>
+          </g>
+
+          <g color="#7E7E88"><use href="#logomark" x="494" y="200" width="52" height="52"/></g>
+
+          <g>
+            <circle class="geo-node" cx="250" cy="56" r="4"/>
+            <circle class="geo-node" cx="268" cy="106" r="4"/>
+            <circle class="geo-node" cx="276" cy="156" r="4"/>
+            <circle class="geo-node" cx="272" cy="206" r="4"/>
+            <circle class="geo-node" cx="260" cy="256" r="4"/>
+            <circle class="geo-node" cx="240" cy="306" r="4"/>
+            <circle class="geo-node" cx="214" cy="356" r="4"/>
+            <circle class="geo-node" cx="182" cy="404" r="4"/>
+            <circle class="geo-node geo-out" cx="820" cy="146" r="5"/>
+            <circle class="geo-node geo-out" cx="820" cy="316" r="5"/>
+          </g>
+
+          <g class="geo-lbl" text-anchor="end">
+            <text x="234" y="61">Китай</text>
+            <text x="252" y="111">Южная Корея</text>
+            <text x="260" y="161">Тайвань</text>
+            <text x="256" y="211">Сингапур</text>
+            <text x="244" y="261">Гонконг</text>
+            <text x="224" y="311">Япония</text>
+            <text x="198" y="361">Малайзия</text>
+            <text x="166" y="409">ОАЭ</text>
+          </g>
+          <g class="geo-lbl" text-anchor="start">
+            <text x="838" y="151">Россия</text>
+            <text x="838" y="321">Беларусь</text>
+          </g>
+          <g class="geo-cap">
+            <text x="182" y="442" text-anchor="start">ЗАКУПКА</text>
+            <text x="520" y="276" text-anchor="middle">SYNTEGRA</text>
+            <text x="838" y="236" text-anchor="start">ПОСТАВКА</text>
+          </g>
+        </svg>
+
+        <div class="geo-lists">
+          <div class="geo-box rv">
+            <h4>Закупка</h4>
+            <ul><li>Китай</li><li>Южная Корея</li><li>Тайвань</li><li>Сингапур</li>
+                <li>Гонконг</li><li>Япония</li><li>Малайзия</li><li>ОАЭ</li></ul>
+          </div>
+          <div class="geo-box rv" style="--i:1">
+            <h4>Поставка</h4>
+            <ul><li>Россия</li><li>Беларусь</li></ul>
+          </div>
+          <div class="geo-box rv" style="--i:2">
+            <h4>Присутствие</h4>
+            <ul><li>Москва, Зеленоград</li><li>Дубай, ОАЭ</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ФОРМА ═══════════════ -->
+<section class="sec sec-blue" id="request">
+  <div class="wrap">
+    <div class="form-grid">
+      <div>
+        <p class="tag rv" style="margin-bottom:22px">06 · Заявка</p>
+        <h2 class="rv" style="--i:1">Пришлите список позиций</h2>
+        <p class="lead rv" style="--i:2;margin-top:20px">
+          Не нужно готовить техзадание. Достаточно списка part numbers или описания того,
+          что требуется, — остальное уточним сами.
+        </p>
+
+        <div class="contacts rv" style="--i:3">
+          <a href="mailto:info@syntegra.su"><em>Почта</em>info@syntegra.su</a>
+          <a href="tel:+79104320101"><em>Телефон</em>+7 910 432-01-01</a>
+          <span><em>Города</em>Москва, Зеленоград · Дубай</span>
+        </div>
+      </div>
+
+      <form id="request-form" class="rv" style="--i:1" novalidate>
+        <div class="form-body">
+          <div class="row">
+            <div class="field">
+              <input type="text" id="f-name" name="name" placeholder=" " autocomplete="name" required>
+              <span class="err">обязательно</span>
+              <label for="f-name">Имя</label>
+            </div>
+            <div class="field">
+              <input type="text" id="f-company" name="company" placeholder=" " autocomplete="organization">
+              <label for="f-company">Компания</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <input type="tel" id="f-phone" name="phone" placeholder=" " autocomplete="tel" required>
+              <span class="err">обязательно</span>
+              <label for="f-phone">Телефон</label>
+            </div>
+            <div class="field">
+              <input type="email" id="f-email" name="email" placeholder=" " autocomplete="email" required>
+              <span class="err">проверьте</span>
+              <label for="f-email">Почта</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <input type="text" id="f-inn" name="inn" placeholder=" " inputmode="numeric">
+            <label for="f-inn">ИНН — необязательно</label>
+          </div>
+
+          <div class="field">
+            <textarea id="f-task" name="task" placeholder=" " required></textarea>
+            <span class="err">обязательно</span>
+            <label for="f-task">Что нужно</label>
+          </div>
+
+          <label class="file" for="f-file">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+            </svg>
+            <span>
+              <b id="file-name">Прикрепить список позиций</b>
+              <small id="file-hint">Excel, PDF, текст — необязательно</small>
+            </span>
+            <input type="file" id="f-file" name="file" accept=".xls,.xlsx,.csv,.pdf,.txt,.doc,.docx">
+          </label>
+
+          <div class="form-foot">
+            <button type="submit" class="btn btn-solid">Отправить запрос
+              <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+            </button>
+            <p class="consent">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+          </div>
+
+          <p class="after">
+            Ответим в течение рабочего дня. Список позиций удобнее прислать файлом —
+            Excel, PDF или просто текстом.
+          </p>
+        </div>
+
+        <div class="sent" role="status">
+          <span class="serif">Спасибо, заявка отправлена</span>
+          <p>Мы получили запрос и ответим в течение рабочего дня.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════ ПОДВАЛ ═══════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-brand">
+        <a class="logo" href="#top" aria-label="SYNTEGRA, наверх">
+          <svg><use href="#logomark"/></svg><b>Syntegra</b>
+        </a>
+        <p>Торговый дом. Поставка запчастей к полупроводниковому оборудованию,
+           химии для микроэлектроники и промышленного оборудования из Азии
+           в Россию и Беларусь.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Контакты</h4>
+          <a href="mailto:info@syntegra.su">info@syntegra.su</a>
+          <a href="tel:+79104320101">+7 910 432-01-01</a>
+        </div>
+        <div class="foot-col">
+          <h4>Города</h4>
+          <span>Москва, Зеленоград</span>
+          <span>Дубай, ОАЭ</span>
+        </div>
+        <div class="foot-col">
+          <h4>Разделы</h4>
+          <a href="#supply">Что поставляем</a>
+          <a href="#process">Как работаем</a>
+          <a href="#request">Отправить заявку</a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 SYNTEGRA</span>
+      <span>Стоимость и сроки — по запросу</span>
+    </div>
+  </div>
+</footer>
+
+<style>section[id]{scroll-margin-top:90px}</style>
+
+<script>
+(function(){
+'use strict';
+
+/* ═══════════════════════════════════════════════════════════════
+   ЗАМЕНИТЬ ПЕРЕД ПУБЛИКАЦИЕЙ
+   Пока FORM_ENDPOINT = null, форма работает заглушкой: показывает
+   «Спасибо, заявка отправлена» и никуда не отправляет. Подставьте
+   сюда URL обработчика — и отправка заработает, больше ничего
+   менять не нужно.
+   ═══════════════════════════════════════════════════════════════ */
+var FORM_ENDPOINT = null;
+
+var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $  = function(s,c){return (c||document).querySelector(s)};
+var $$ = function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+var header = $('#header');
+
+/* ── мобильное меню ── */
+var burger = $('#burger'), nav = $('#nav');
+function closeNav(){
+  nav.classList.remove('open');
+  burger.setAttribute('aria-expanded','false');
+  document.body.style.overflow = '';
+}
+burger.addEventListener('click', function(){
+  var open = nav.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+$$('#nav a').forEach(function(a){ a.addEventListener('click', closeNav) });
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeNav() });
+
+/* ── появление блоков и докрутка цифр ── */
+function runCounter(el){
+  var target = parseInt(el.getAttribute('data-count'), 10);
+  var pre = el.getAttribute('data-prefix') || '';
+  var suf = el.getAttribute('data-suffix') || '';
+  var out = function(v){ el.innerHTML = pre + v + (suf ? '<i class="aff">' + suf + '</i>' : '') };
+  if (RM){ out(target); return; }
+  var dur = 1700, t0 = performance.now();
+  (function step(now){
+    var p = Math.min(1, (now - t0) / dur);
+    var e = 1 - Math.pow(1 - p, 4);
+    out(Math.round(target * e));
+    if (p < 1) requestAnimationFrame(step);
+  })(performance.now());
+}
+
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if (!en.isIntersecting) return;
+    en.target.classList.add('in');
+    $$('[data-count]', en.target).forEach(runCounter);
+    if (en.target.classList.contains('geo-svg')) drawGeo();
+    io.unobserve(en.target);
+  });
+}, {threshold:0.1, rootMargin:'0px 0px -6% 0px'});
+$$('.rv').forEach(function(el){ io.observe(el) });
+
+/* ── единый цикл прокрутки ──────────────────────────────────────
+   Раньше на каждое событие scroll вызывалось два обработчика, и каждый
+   спрашивал у браузера геометрию элементов. Браузер вынужден пересчитывать
+   раскладку десятки раз в секунду — отсюда рывки.
+   Теперь позиции замеряются один раз (и заново при изменении размеров),
+   а на прокрутку приходится одна лёгкая проверка в кадре анимации.
+   ────────────────────────────────────────────────────────────── */
+var steps  = $$('#steps .step');
+var stepAt = [];            // абсолютные позиции шагов, посчитанные заранее
+var queued = false;
+var stuck  = null;          // текущее состояние шапки, чтобы не трогать DOM зря
+
+function measure(){
+  var base = window.pageYOffset;
+  stepAt = steps.map(function(s){ return s.getBoundingClientRect().top + base });
+}
+
+function frame(){
+  queued = false;
+  var y = window.pageYOffset;
+
+  var nowStuck = y > 24;
+  if (nowStuck !== stuck){ stuck = nowStuck; header.classList.toggle('stuck', nowStuck) }
+
+  var vh = window.innerHeight;
+  var line = y + vh * 0.72;
+  for (var i = 0; i < steps.length; i++){
+    var on = stepAt[i] < line;
+    if (on !== steps[i]._on){ steps[i]._on = on; steps[i].classList.toggle('on', on) }
+  }
+}
+
+function onScroll(){ if (!queued){ queued = true; requestAnimationFrame(frame) } }
+
+window.addEventListener('scroll', onScroll, {passive:true});
+window.addEventListener('resize', function(){ measure(); onScroll() });
+window.addEventListener('load',   function(){ measure(); onScroll() });
+measure(); onScroll();
+
+/* ── схема географии: линии прорисовываются при появлении ── */
+var geoDrawn = false;
+function drawGeo(){
+  if (geoDrawn) return; geoDrawn = true;
+  $$('.geo-line').forEach(function(p, i){
+    var L = p.getTotalLength();
+    p.style.strokeDasharray  = L;
+    p.style.strokeDashoffset = L;
+    if (RM){ p.style.strokeDashoffset = 0; return; }
+    p.style.transition = 'stroke-dashoffset 2s cubic-bezier(.19,1,.22,1) ' + (i * 110) + 'ms';
+    requestAnimationFrame(function(){ p.style.strokeDashoffset = 0 });
+  });
+}
+
+/* ── форма ── */
+var form = $('#request-form');
+var fileInput = $('#f-file'), fileName = $('#file-name'), fileHint = $('#file-hint');
+
+fileInput.addEventListener('change', function(){
+  if (fileInput.files && fileInput.files[0]){
+    var f = fileInput.files[0];
+    fileName.textContent = f.name;
+    fileHint.textContent = (f.size / 1024 / 1024).toFixed(2) + ' МБ · нажмите, чтобы заменить';
+  } else {
+    fileName.textContent = 'Прикрепить список позиций';
+    fileHint.textContent = 'Excel, PDF, текст — необязательно';
+  }
+});
+
+function markBad(el, bad){
+  el.parentNode.classList.toggle('bad', bad);
+  return !bad;
+}
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  var name = $('#f-name'), phone = $('#f-phone'), email = $('#f-email'), task = $('#f-task');
+  var ok = true;
+  ok = markBad(name,  name.value.trim().length < 2) && ok;
+  ok = markBad(phone, phone.value.replace(/\D/g, '').length < 6) && ok;
+  ok = markBad(email, !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim())) && ok;
+  ok = markBad(task,  task.value.trim().length < 3) && ok;
+  if (!ok){ var bad = $('.field.bad input, .field.bad textarea'); if (bad) bad.focus(); return; }
+
+  var done = function(){ form.classList.add('done'); form.scrollIntoView({block:'center'}) };
+  if (!FORM_ENDPOINT){ done(); return; }
+  var btn = $('button[type=submit]', form);
+  btn.disabled = true; btn.textContent = 'Отправляем…';
+  fetch(FORM_ENDPOINT, {method:'POST', body:new FormData(form)})
+    .then(done)
+    .catch(function(){
+      btn.disabled = false; btn.textContent = 'Отправить запрос';
+      alert('Не удалось отправить. Напишите, пожалуйста, на info@syntegra.su');
+    });
+});
+
+$$('#request-form input, #request-form textarea').forEach(function(el){
+  el.addEventListener('input', function(){ el.parentNode.classList.remove('bad') });
+});
+
+})();
+</script>
+
+</body>
+</html>
