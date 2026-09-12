@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="SYNTEGRA — находим и поставляем то, чего нет в каталогах">
 <meta property="og:description" content="Запчасти к полупроводниковому оборудованию, химия для микроэлектроники, промышленное снабжение. Из Азии — в Россию и Беларусь, по договору и в рублях.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23080A0F'/%3E%3Cpath d='M70 30 L42 30 L22 50 L58 50 L78 70 L30 70' fill='none' stroke='%23E9E9EA' stroke-width='11'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23080A0F'/%3E%3Cpath d='M75 25 L43 25 L23 47 L57 47 L77 69 L29 69' fill='none' stroke='%234FC8D8' stroke-width='12.5' stroke-linejoin='miter'/%3E%3C/svg%3E">
 <script>document.documentElement.className += " js"</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -122,7 +122,7 @@ header.stuck{background:rgba(7,10,16,.94);backdrop-filter:blur(8px);
   -webkit-backdrop-filter:blur(8px);border-bottom-color:var(--line)}
 .bar{display:flex;align-items:center;gap:32px;height:78px}
 .logo{display:flex;align-items:center;gap:12px;flex:none}
-.logo svg{width:26px;height:26px;flex:none}
+.logo svg{width:29px;height:29px;flex:none}
 .logo b{font-weight:500;font-size:14px;letter-spacing:.26em;text-transform:uppercase}
 .nav{margin-left:auto;display:flex;gap:30px;align-items:center}
 .nav a{font-size:13px;color:var(--muted);letter-spacing:.01em;transition:color .35s;
@@ -146,7 +146,15 @@ header.stuck{background:rgba(7,10,16,.94);backdrop-filter:blur(8px);
 /* ═══════════════ ЭКРАН 1 ═══════════════ */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;
   padding-top:clamp(112px,13vh,152px);padding-bottom:clamp(46px,6vw,84px);overflow:hidden}
-.hero .wrap{width:100%}
+.hero .wrap{width:100%;position:relative;z-index:2}
+/* крупный фирменный знак справа: контур с прорисовкой линий при загрузке */
+.hero-mark{position:absolute;right:-11%;top:50%;transform:translateY(-50%);
+  width:min(42vw,520px);aspect-ratio:1;pointer-events:none;z-index:0}
+.hero-mark svg{width:100%;height:100%;display:block}
+.hm-hex{fill:none;stroke:rgba(120,205,245,.22);stroke-width:1.1}
+.hm-s{fill:none;stroke:rgba(120,205,245,.3);stroke-width:5.6;stroke-linejoin:miter}
+.hm-net{fill:none;stroke:rgba(120,205,245,.16);stroke-width:.9}
+.hm-dot{fill:rgba(120,205,245,.4)}
 .hero .tag{margin-bottom:clamp(22px,3vw,34px)}
 .hero h1{margin-bottom:clamp(34px,4.4vw,58px)}
 .hero-foot{display:grid;grid-template-columns:minmax(0,5.4fr) minmax(0,4fr);
@@ -319,6 +327,7 @@ footer{border-top:1px solid var(--line);padding:clamp(50px,6vw,78px) 0 40px;back
 
 /* ═══════════════ АДАПТИВ ═══════════════ */
 @media(max-width:1180px){
+  .hero-mark{opacity:.45;right:-18%}
   .sec-grid{grid-template-columns:1fr;gap:26px}
   .sec-aside{position:static;flex-direction:row;gap:14px;align-items:baseline}
   .oem{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -340,6 +349,7 @@ footer{border-top:1px solid var(--line);padding:clamp(50px,6vw,78px) 0 40px;back
   .step{grid-template-columns:auto 1fr;gap:8px 22px}
   .step p{grid-column:2}
   .hero{min-height:auto;padding-top:126px;padding-bottom:64px}
+  .hero-mark{display:none}
   .hero-foot{gap:30px}
   .geo-svg{display:none}
   .dir-list{column-count:1}
@@ -372,11 +382,18 @@ footer{border-top:1px solid var(--line);padding:clamp(50px,6vw,78px) 0 40px;back
      ЗАМЕНИТЬ ПЕРЕД ПУБЛИКАЦИЕЙ, если нужен оригинальный файл: заменить
      содержимое symbol#logomark на путь из вашего SVG. -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="lgGrad" x1="6%" y1="2%" x2="94%" y2="98%">
+      <stop offset="0%"   stop-color="#33549A"/>
+      <stop offset="48%"  stop-color="#3E8AB6"/>
+      <stop offset="100%" stop-color="#57D0C4"/>
+    </linearGradient>
+  </defs>
   <symbol id="logomark" viewBox="0 0 100 100">
-    <path d="M50 3 L93 26 L93 74 L50 97 L7 74 L7 26 Z" fill="none" stroke="currentColor"
-          stroke-width="2" opacity=".34"/>
-    <path d="M70 30 L42 30 L22 50 L58 50 L78 70 L30 70" fill="none" stroke="currentColor"
-          stroke-width="11" stroke-linejoin="miter"/>
+    <path d="M50 3 L94 27 L94 73 L50 97 L6 73 L6 27 Z" fill="none" stroke="#3F6FA4"
+          stroke-width="2.2" opacity=".55"/>
+    <path d="M75 25 L43 25 L23 47 L57 47 L77 69 L29 69" fill="none" stroke="url(#lgGrad)"
+          stroke-width="12.5" stroke-linejoin="miter"/>
   </symbol>
 </svg>
 
@@ -403,6 +420,30 @@ footer{border-top:1px solid var(--line);padding:clamp(50px,6vw,78px) 0 40px;back
 
 <!-- ═══════════════ ЭКРАН 1 ═══════════════ -->
 <section class="hero">
+  <div class="hero-mark" aria-hidden="true">
+    <svg viewBox="0 0 200 200" fill="none">
+      <g class="hm-net">
+        <path d="M100 26 L100 6"/>
+        <path d="M170 66 L188 56 L198 62"/>
+        <path d="M170 134 L188 144"/>
+        <path d="M30 134 L12 144 L2 138"/>
+        <path d="M30 66 L12 56"/>
+        <path d="M158 100 L180 100 L192 112"/>
+        <path d="M42 100 L20 100 L8 88"/>
+      </g>
+      <g class="hm-dot">
+        <circle cx="100" cy="6" r="2.6"/><circle cx="198" cy="62" r="2.6"/>
+        <circle cx="188" cy="144" r="2.6"/><circle cx="2" cy="138" r="2.6"/>
+        <circle cx="12" cy="56" r="2.6"/><circle cx="192" cy="112" r="2.6"/>
+        <circle cx="8" cy="88" r="2.6"/>
+      </g>
+      <g transform="translate(40 40) scale(1.2)">
+        <path class="hm-hex" d="M50 3 L94 27 L94 73 L50 97 L6 73 L6 27 Z"/>
+        <path class="hm-s" d="M75 25 L43 25 L23 47 L57 47 L77 69 L29 69"/>
+      </g>
+    </svg>
+  </div>
+
   <div class="wrap">
     <p class="tag rv">Торговый дом · Москва · Дубай</p>
     <h1 class="rv lines" style="--i:1">
@@ -746,7 +787,7 @@ footer{border-top:1px solid var(--line);padding:clamp(50px,6vw,78px) 0 40px;back
             <path class="geo-line geo-out" d="M520 226 C620 226 700 316 820 316"/>
           </g>
 
-          <g color="#7E7E88"><use href="#logomark" x="494" y="200" width="52" height="52"/></g>
+          <use href="#logomark" x="492" y="198" width="56" height="56" opacity=".9"/>
 
           <g>
             <circle class="geo-node" cx="250" cy="56" r="4"/>
@@ -1035,6 +1076,28 @@ window.addEventListener('scroll', onScroll, {passive:true});
 window.addEventListener('resize', function(){ measure(); onScroll() });
 window.addEventListener('load',   function(){ measure(); onScroll() });
 measure(); onScroll();
+
+/* ── прорисовка контуров линией ──────────────────────────────
+   Линия появляется так, будто её чертят: длина штриха равна длине
+   пути, а смещение уводится к нулю. ─────────────────────────── */
+function drawPaths(nodes, dur, step, delay){
+  nodes.forEach(function(el, i){
+    var L = el.getTotalLength ? el.getTotalLength() : 0;
+    if (!L) return;
+    el.style.strokeDasharray  = L;
+    el.style.strokeDashoffset = L;
+    if (RM){ el.style.strokeDashoffset = 0; return; }
+    el.style.transition = 'stroke-dashoffset ' + dur + 'ms cubic-bezier(.19,1,.22,1) '
+                        + (delay + i * step) + 'ms';
+    requestAnimationFrame(function(){ el.style.strokeDashoffset = 0 });
+  });
+}
+
+// знак в шапке чертится сразу при загрузке
+drawPaths($$('.logo svg path, .logo svg use'), 1100, 140, 180);
+// крупный знак первого экрана — следом, медленнее
+drawPaths($$('.hm-net path'), 900, 90, 400);
+drawPaths($$('.hm-hex, .hm-s'), 1700, 260, 700);
 
 /* ── схема географии: линии прорисовываются при появлении ── */
 var geoDrawn = false;
