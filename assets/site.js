@@ -46,6 +46,7 @@ var io = new IntersectionObserver(function(entries){
     if (!en.isIntersecting) return;
     en.target.classList.add('in');
     $$('[data-count]', en.target).forEach(runCounter);
+    if (en.target.classList.contains('map')) drawPaths($$('.map-arc', en.target), 1800, 0, 300);
     io.unobserve(en.target);
   });
 }, {threshold:0.1, rootMargin:'0px 0px -6% 0px'});
