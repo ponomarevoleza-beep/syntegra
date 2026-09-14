@@ -560,3 +560,21 @@ section[id],[id].sec{scroll-margin-top:90px}
 @media(max-width:640px){
   .ind-grid,.makers,.foot-cols{grid-template-columns:1fr}
 }
+
+/* ── картинки: превью в карточках направлений и в шапках их страниц ── */
+.dir-img{display:block;aspect-ratio:3/2;overflow:hidden;margin-bottom:22px;border:1px solid var(--line);
+  background:var(--bg-2)}
+.dir-img img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);
+  transition:transform 1.2s var(--ease),filter .6s}
+.dir-card:hover .dir-img img{transform:scale(1.07)}
+.page-hero .hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:end}
+.page-hero.has-pic .hero-grid{grid-template-columns:minmax(0,7fr) minmax(0,4fr)}
+.hero-pic{margin:0;aspect-ratio:4/3;overflow:hidden;border:1px solid var(--line);background:var(--bg-2);position:relative}
+.hero-pic img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-pic::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(7,10,16,.18),transparent 40%,rgba(7,10,16,.42));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+@media(max-width:900px){
+  .page-hero.has-pic .hero-grid{grid-template-columns:1fr}
+  .hero-pic{aspect-ratio:16/10}
+}
